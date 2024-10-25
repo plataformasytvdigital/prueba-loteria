@@ -1,0 +1,60 @@
+body {
+    background-color: #000;
+}
+
+.numeros {
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.numeros.libre {
+    background-color: white;
+    color: black;
+}
+
+.numeros.debe {
+    background-color: red;
+    color: white;
+}
+
+.numeros.pago {
+    background-color: green;
+    color: white;
+}
+
+.selected {
+    border: 2px solid yellow; /* Estilo de resaltado */
+}
+
+#acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#acciones button {
+    margin: 5px 0;
+}
+
+.table-light td.debe {
+    background-color: red;
+    color: white;
+}
+
+.table-light td.pago {
+    background-color: green;
+    color: white;
+}
+
+.table-light td.libre {
+    background-color: white;
+    color: black;
+}

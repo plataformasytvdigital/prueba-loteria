@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería - Aplicación</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white">
+
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <img src="logo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 200px;">
+            <h1>Lotería</h1>
+            
+            <p id="fecha"></p>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#numeros">Números</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#usuarios">Usuarios</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="numeros" class="mb-4">
+            <h2 style="text-align: center;">Números disponibles</h2>
+            <div class="row" id="numeros-container"></div>
+            <div id="acciones" class="mt-4" style="display:none;">
+                <input type="text" id="nombre-participante" class="form-control mb-2" placeholder="Ingrese su nombre" required>
+                <input type="text" id="celular-participante" class="form-control mb-2" placeholder="Ingrese su celular" required>
+                <button id="guardar" class="btn btn-success">Guardar</button>
+                <button id="debe" class="btn btn-danger">Debe</button>
+                <button id="pago" class="btn btn-primary">Pago</button>
+                <button id="borrar" class="btn btn-warning">Borrar</button>
+            </div>
+        </section>
+
+        <section id="usuarios" class="mb-4">
+            <h2 style="text-align: center;">Usuarios</h2>
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Nombre</th>
+                        <th>Celular</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="usuarios-lista"></tbody>
+            </table>
+        </section>
+
+        <button id="reiniciar" class="btn btn-danger">Reiniciar Sorteo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
